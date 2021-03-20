@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Taskbar from "./components/taskbar.component"
+import mouseclick from "./assets/mouseclick.mp3"
+import door from "./assets/door.mp3"
+import{BrowserRouter as Router , Route, Switch, Link} from "react-router-dom"
+import Home from "./components/home.component"
 function App() {
+  
+  const mouseclickAud = new Audio(mouseclick)
+  const doorAud = new Audio(door)
+  mouseclickAud.volume = 0.5
+  doorAud.volume = 0.5
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+      <Taskbar mouseclick={mouseclickAud} door={doorAud}/>
+      <Switch>
+        <Route path="/" component={()=><Home/>}/>
+      </Switch>
+      </Router>
     </div>
   );
 }

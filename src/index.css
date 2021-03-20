@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+html { 
+  /* background: url(./asstes/bg.png) no-repeat center center fixed;  */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+*{
+  --primary : rgb(248, 172, 162);
+  --secondary :rgb(246, 191, 173);
+  font-weight: 700;
+  font-family: Montserrat;
+}
+.taskbar_holder{
+  color: azure;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height:10vh;
+  background: var(--primary);
+  padding:0px 10px 0px 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0 ,0,0,0.6);
+}
+.taskbar_content{
+  display: flex;
+  align-items: center;
+  width:60%;
+}
+.taskbar_home{
+  font-size: 2rem;
+  font-family: Montserrat, sans-serif;
+  display: block;
+
+}
+.links{
+  width:50%;
+  display: flex;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.links a{
+  font-family: default;
+  font-size: 1rem;
+}
+.bun{
+  display:none;
+}
+.bun_menu_items{
+  display: none;}
+.bun_menu{
+    display: none;}
+
+.links_anchor{
+  text-decoration: none;
+  color:white;
+  font-size: 2rem;
+  font-family:Montserrat,sans-serif;
+}
+.links_anchors{
+  text-decoration: none;
+  color:white;
+  font-size: 1rem;
+  font-family:Montserrat,sans-serif;
+}
+.logo_img{
+  height: 60px;
+  width: 60px;
+  animation: logorotate 1s ease-in-out infinite;
+  animation-direction:alternate;
+  filter:drop-shadow(2px 4px 8px #585858)
+}
+.logo_img:hover{
+  transform:scale(2,2);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
