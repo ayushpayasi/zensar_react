@@ -1,17 +1,27 @@
+/* url(./assets/bg.png) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 html { 
-  /* background: url(./asstes/bg.png) no-repeat center center fixed;  */
+  background: black no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-*{
-  --primary : rgb(248, 172, 162);
-  --secondary :rgb(246, 191, 173);
-  font-weight: 700;
-  font-family: Montserrat;
+
+body{
+  margin:0;
 }
+*{
+  --primary : #3700b3;
+  --secondary :rgba(187, 134, 252,0.8);
+  --ternary:#03DAC6;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* taskbar component */
+
 .taskbar_holder{
   color: azure;
   display: flex;
@@ -22,6 +32,8 @@ html {
   background: var(--primary);
   padding:0px 10px 0px 10px;
   box-shadow: 0px 0px 10px 0px rgba(0 ,0,0,0.6);
+  position: sticky;
+  top:0%;
 }
 .taskbar_content{
   display: flex;
@@ -30,7 +42,7 @@ html {
 }
 .taskbar_home{
   font-size: 2rem;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   display: block;
 
 }
@@ -42,7 +54,7 @@ html {
   align-items: center;
 }
 .links a{
-  font-family: default;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
 }
 .bun{
@@ -55,24 +67,123 @@ html {
 
 .links_anchor{
   text-decoration: none;
-  color:white;
+  color:var(--ternary);
   font-size: 2rem;
-  font-family:Montserrat,sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .links_anchors{
   text-decoration: none;
-  color:white;
+  color:var(--ternary);
   font-size: 1rem;
-  font-family:Montserrat,sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .logo_img{
   height: 60px;
-  width: 60px;
-  animation: logorotate 1s ease-in-out infinite;
-  animation-direction:alternate;
-  filter:drop-shadow(2px 4px 8px #585858)
-}
-.logo_img:hover{
-  transform:scale(2,2);
+  width: 100px;
+  filter:drop-shadow(2px 4px 8px #585858);
+  animation: logoanimate 2s infinite;
+  animation-direction: alternate;
 }
 
+
+
+
+/* home component */
+
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.home h1{
+  color:var(--ternary);
+  font-size: 2rem;
+}
+.card_holder{
+  width:90%;
+  height:95vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap:10px;
+}
+
+
+
+/* card component */
+.card{
+  width:200px;
+  height:200px;
+  background:var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--ternary);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px var(--secondary);
+}
+.card_img{
+  width:100%;
+  height:70%;  
+  position: relative;
+}
+.card_img img{
+  width:100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+}
+.card_img h4{
+  position: absolute;
+  z-index: 2;
+  margin-top: 10px;
+  color:var(--ternary);
+  top:0;
+}
+
+
+
+
+@keyframes logoanimate{
+  from{transform:scale(1.5,1.5)}
+  to{transform:scale(2,2)}
+}
+
+
+@media only screen and (max-width: 768px){
+  .support,.home,.contact,.about{
+    margin :20px 50px 20px 50px;
+  }
+  .taskbar_content{
+    display: none;
+  }
+  
+  .taskbar_holder{
+    box-shadow:0px 0px 0px 0px ;
+  }
+  .bun{
+    display: block;
+  }
+  
+  .bun_menu{
+    display: block;
+    background: var(--ternary);
+    opacity: 0.8;
+    padding:2px 0px 2px 0px;
+    overflow: hidden;
+    position: relative;
+    height:0px;
+    transition: height 2px;
+  }
+  .bun_menu_items{
+    display: flex;
+    color:white;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    
+  }
+  }
