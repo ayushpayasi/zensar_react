@@ -39,7 +39,7 @@ export default function Taskbar(props) {
                 </div>
                 <div className="links">
                     <Link onClick={(event)=>{playClick(event)}} className="links_anchor" to="/search"><a> SEARCH</a></Link>
-                    <Link onClick={(event)=>{playClick(event)}} className="links_anchor" to="/contact"><a> CONTACT</a></Link>
+                    <Link onClick={(event)=>{playClick(event)}} className="links_anchor" to="/edit"><a> EDIT</a></Link>
                 </div>
             </div>
             <div className="bun">
@@ -51,8 +51,8 @@ export default function Taskbar(props) {
         </div>
         <div className="bun_menu">
         <div className="bun_menu_items">
-            <Link onClick={(event)=>{playClick(event)}} className="links_anchors" to="/about"><a> SEARCH</a></Link>
-            <Link onClick={(event)=>{playClick(event)}} className="links_anchors" to="/contact"><a> CONTACT</a></Link>
+            <Link onClick={(event)=>{playClick(event)}} className="links_anchors" to="/search"><a> SEARCH</a></Link>
+            <Link onClick={(event)=>{playClick(event)}} className="links_anchors" to="/edit"><a> EDIT</a></Link>
         </div>
     </div></React.Fragment>
     )

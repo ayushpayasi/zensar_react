@@ -144,6 +144,133 @@ body{
   top:0;
 }
 
+/* seacrh component */
+.search{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.search_box{
+  margin-top: 20px;
+  width:90%;
+  height: 80vh;
+  background: rgba(187, 134, 252,0.6);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.search_bar{
+  height:10%;
+  width:80%;
+  margin-top:10px;
+  position: relative;
+  box-shadow: 1px 1px 5px 2px var(--secondary);
+}
+.search_bar input{
+  height: 100%;
+  width:100%;
+  background: transparent;
+  box-shadow: transparent;
+  font-size: 2rem;
+  text-align: center;
+}
+.search_bar img{
+  position: absolute;
+  height:100%;
+  width:10%;
+  top:0%;
+  left:5%;
+}
+.search label{
+  margin-top: 20px;
+  font-size: 2rem;
+}
+.button_box{
+  box-shadow: 1px 1px 5px 2px var(--secondary);
+  height:10%;
+  width:20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 2rem;
+}
+.result{
+  margin-top: 10px;
+  height:60%;
+  width:95%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: scroll;
+  gap:20px;
+}
+
+::-webkit-scrollbar{
+  background: transparent;
+  width:10px;
+}
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background: grey;
+  border-radius: 5px;
+}
+
+
+/* edit */
+.edit{
+  margin-left:auto;
+  width:100%;
+  height:90vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.dropdown{
+  flex:1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+.dropdown select{
+  width:100%;
+}
+.dropdown select option{
+  color:black;
+}
+.field{
+  flex:3;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-between;
+  border:2px solid black;
+}
+.field input{
+  width:400px;
+}
+
+.edit_box{
+  margin: 20px 20px 10px 20px;
+  width:100%;
+  height: 80vh;
+  background: rgba(187, 134, 252,0.6);
+  display: flex;
+  flex-wrap: wrap;
+  align-items:flex-start;
+  justify-content: space-between;
+}
+
+
 
 
 
@@ -170,7 +297,7 @@ body{
   
   .bun_menu{
     display: block;
-    background: var(--ternary);
+    background: var(--primary);
     opacity: 0.8;
     padding:2px 0px 2px 0px;
     overflow: hidden;
